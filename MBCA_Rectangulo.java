@@ -8,15 +8,19 @@
  * @author manuel.benavente
  */
 public class MBCA_Rectangulo {
-
+    // @Auth
+    // @version 1
+    // Atributos
     int id;
     double LadoA;
     double LadoB;
     String Color;
 
+    // Constructor por defecto
     public MBCA_Rectangulo() {
     }
 
+    // Constructor con todos los argumentos
     public MBCA_Rectangulo(int id, double LadoA, double LadoB, String Color) {
         this.id = id;
         this.LadoA = LadoA;
@@ -24,6 +28,7 @@ public class MBCA_Rectangulo {
         this.Color = Color;
     }
 
+    // Metodos Getter y Setter
     public int getId() {
         return id;
     }
@@ -56,11 +61,13 @@ public class MBCA_Rectangulo {
         this.Color = color;
     }
 
+    // Metodo toString
     @Override
     public String toString() {
         return "MBCA_Rectangulo{" + "id=" + id + ", ladoA=" + LadoA + ", ladoB=" + LadoB + ", color=" + Color + '}';
     }
 
+    // Clase publica estatica de area cuadrado
     public static double areacuadrado(MBCA_Rectangulo cuadrado1) {
         // Calcula area cuadrado LadoA + LadoB
         double ladoA = cuadrado1.getLadoA();
@@ -68,5 +75,8 @@ public class MBCA_Rectangulo {
         double area1 = ladoA * ladoB;
         System.out.println("Area cuadrado: " + area1);
         return area1;
+        // Esta clase nos obtiene los lados a y b del rectangulo y calcula el area
+        // haciendo la
+        // operacion ladoA * ladoB, luego muestra en pantalla el resultado
     }
 }
