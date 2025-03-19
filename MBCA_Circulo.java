@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -9,49 +10,54 @@
  */
 public class MBCA_Circulo {
 
-    int id = 1;
-    double radio = 12.3;
-    String color = "Rojo";
-
-    public MBCA_Circulo(int id, double radio, String color) {
-        this.id = id;
-        this.radio = radio;
-        this.color = color;
-    }
+    int Id;
+    double Radio;
+    String Color;
 
     public int getId() {
-        return id;
+        return Id;
     }
 
     public double getRadio() {
-        return radio;
+        return Radio;
     }
 
     public String getColor() {
-        return color;
+        return Color;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.Id = Id;
     }
 
     public void setRadio(double radio) {
-        this.radio = radio;
+        this.Radio = Radio;
     }
 
     public void setColor(String color) {
-        this.color = color;
+        this.Color = Color;
     }
 
     public MBCA_Circulo() {
     }
 
-    @Override
-    public String toString() {
-        return "MBCA_Circulo{" + "id=" + id + ", radio=" + radio + ", color=" + color + '}';
+    public MBCA_Circulo(int id, double Radio, String Color) {
+        this.Id = Id;
+        this.Radio = Radio;
+        this.Color = Color;
     }
 
-    public static void main(String[] args) {
+    @Override
+    public String toString() {
+        return "MBCA_Circulo{" + "id=" + Id + ", radio=" + Radio + ", color=" + Color + '}';
+    }
+
+    public static double areacirculo(MBCA_Circulo circulo1) {
+        // Calcula area circulo pi*R2
+        double radio1 = circulo1.getRadio();
+        double area2 = radio1 * 3.14;
+        System.out.println("Area circulo: " + area2);
+        return area2;
     }
 
 }

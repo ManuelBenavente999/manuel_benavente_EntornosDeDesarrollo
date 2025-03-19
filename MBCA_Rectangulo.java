@@ -8,12 +8,20 @@
  * @author manuel.benavente
  */
 public class MBCA_Rectangulo {
-    int id = 1;
-    double ladoA = 12.3;
-    double ladoB = 6.1;
-    String color = "Amarillo";
+
+    int id;
+    double LadoA;
+    double LadoB;
+    String Color;
 
     public MBCA_Rectangulo() {
+    }
+
+    public MBCA_Rectangulo(int id, double LadoA, double LadoB, String Color) {
+        this.id = id;
+        this.LadoA = LadoA;
+        this.LadoB = LadoB;
+        this.Color = Color;
     }
 
     public int getId() {
@@ -21,15 +29,15 @@ public class MBCA_Rectangulo {
     }
 
     public double getLadoA() {
-        return ladoA;
+        return LadoA;
     }
 
     public double getLadoB() {
-        return ladoB;
+        return LadoB;
     }
 
     public String getColor() {
-        return color;
+        return Color;
     }
 
     public void setId(int id) {
@@ -37,20 +45,28 @@ public class MBCA_Rectangulo {
     }
 
     public void setLadoA(double ladoA) {
-        this.ladoA = ladoA;
+        this.LadoA = ladoA;
     }
 
     public void setLadoB(double ladoB) {
-        this.ladoB = ladoB;
+        this.LadoB = ladoB;
     }
 
     public void setColor(String color) {
-        this.color = color;
+        this.Color = color;
     }
 
     @Override
     public String toString() {
-        return "Rectangulo_MBCA{" + "id=" + id + ", ladoA=" + ladoA + ", ladoB=" + ladoB + ", color=" + color + '}';
+        return "MBCA_Rectangulo{" + "id=" + id + ", ladoA=" + LadoA + ", ladoB=" + LadoB + ", color=" + Color + '}';
     }
 
+    public static double areacuadrado(MBCA_Rectangulo cuadrado1) {
+        // Calcula area cuadrado LadoA + LadoB
+        double ladoA = cuadrado1.getLadoA();
+        double ladoB = cuadrado1.getLadoB();
+        double area1 = ladoA * ladoB;
+        System.out.println("Area cuadrado: " + area1);
+        return area1;
+    }
 }
